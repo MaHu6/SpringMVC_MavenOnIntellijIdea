@@ -12,5 +12,6 @@
 </head>
 <body>
         <h1>调用Callback</h1>
+        <img src="<%=request.getContextPath()%>/resources/imgs/course-img.jpg">
 </body>
 </html>
