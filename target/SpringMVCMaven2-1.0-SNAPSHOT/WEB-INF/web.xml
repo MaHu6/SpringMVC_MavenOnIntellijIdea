@@ -27,6 +27,14 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
 
+    <!--Spring 应用上下文，-->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>WEB-INF/spring/applicationContext_spring.xml</param-value>
+    </context-param>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoader</listener-class>
+    </listener>
 
         <servlet>
           <servlet-name>Dispatcher</servlet-name>
@@ -34,7 +42,7 @@
           <!--对应的上下文配置-->
           <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>WEB-INF/applicationContext.xml</param-value>
+            <param-value>WEB-INF/springmvc/applicationContext_mvc.xml</param-value>
           </init-param>
           <load-on-startup>1</load-on-startup>
         </servlet>
